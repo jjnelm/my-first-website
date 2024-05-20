@@ -5,9 +5,11 @@
 }
 
 body{
-  background-color: rgb(196, 193, 190);
+  background-color: #dfdddd;
 }
 
+
+/* Header styling */
 .wrapper{
   display: flex;
   flex-flow: row wrap;
@@ -17,14 +19,21 @@ body{
   padding: 10px;
   margin: 10px;
   flex: 1 100%;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  
 }
+
+/* Header */
 .global-nav{
   height: 80px;
   background: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  /* box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75); */
 }
 
 .logo-name{
@@ -37,67 +46,6 @@ body{
 .logo-name > p {
   font-size: 24px;
 }
-
-.footer{
-  height: 80px;
-  background: rgb(255, 255, 255);
-}
-
-
-.main{
-  /* text-align: left; */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  /* justify-content: center; */
-  /* align-items: center; */
-  background-color: rgb(196, 193, 190);
-  /* height: 300px; */
-  font-size: 24 px;
-}
-.aside1, .aside2{
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(196, 193, 190);
-  gap: 10px;
-  /* background: #ffffff; */
-  /* box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75); */
-}
-/* .aside2{
-  background: #ffffff;
-  box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
-} */
-
-
-
-@media all and (min-width: 800px){
- .main{
-  flex: 3;
- }
-.aside1{
-  order: 1;
-}
-.aside2{
-  order: 2;
-}
-.main{
-  order: 2;
-}
-.footer{
-  order: 4;
-}
-}
-
-@media all and (min-width:600px){
-  .aside{
-    flex:1;
-  }
-}
-  
 
 .logo{
   height: 50px;
@@ -143,8 +91,6 @@ body{
     border: 2px solid black;
   }
 
-  
-  
   .menu-btn > i {
     font-size: 20px;
     color: rgb(134, 136, 135);
@@ -179,22 +125,30 @@ body{
 
 
 
-/* main section */
+/* main styling */
 
-.profile{
-  background-color: rgb(196, 193, 190);
-  
-
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0px;
+  border-radius: 10px;
+  position: relative;
 }
 .card-container{
+  padding: 10px;
+  margin: 10px;
   border-radius: 10px;
-  box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
--webkit-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
--moz-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
-
-  
-  
 }
+
+
+.profile{
+  background-color: rgb(255, 254, 253);
+border-radius: 10px;
+
+}
+
 
 .banner{
   background: rgb(104,231,221);
@@ -202,6 +156,32 @@ body{
   height: 150px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+.cam-container{
+  position: absolute;
+  width: 50px;
+  height: 50PX;
+  background-color: #ffffff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid rgb(153, 153, 153);
+ 
+}
+.cam-align{
+  position: absolute;
+  margin-top: 20px;
+  width: 95%;
+  justify-content: flex-end;
+  display: flex;
+  margin-right: 20px;
+}
+
+.cam-container > i {
+  font-size: 24px;
 }
 .banner1, .banner2{
   background-color: #ffffff;
@@ -210,63 +190,147 @@ body{
   border-top-right-radius: 10px;
 }
 .profile-details{
-  background: rgb(255, 254, 254);
-  height: 400px;
+  background: rgb(255, 255, 255);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 
 }
+
+.name > h1{
+  margin-left: 40px;
+  margin-top: 90px;
+  margin-bottom: 0px;
+}
+p{
+  text-align: start;
+  margin: 0 0 0 40px;
+  padding: 0px;
+  font-size: 12px;
+}
+
+.profile-buttons{
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  
+}
+
+.add {
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  width: 150px;
+  padding: 5px;
+  border: 1px solid rgb(5, 110, 110);
+  border-radius: 30px;
+  background: linear-gradient(90deg, rgba(104,231,221,1) 0%, rgba(41,168,181,0.7483368347338936) 35%, rgba(0,212,255,1) 100%);
+  
+}
+.message {
+  font-size: 16px;
+  color: rgb(5, 110, 110);
+  cursor: pointer;
+  width: 150px;
+  padding: 5px;
+  border: 1px solid rgb(5, 110, 110);
+  border-radius: 30px;
+  
+}
+.more {
+  font-size: 16px;
+  color: rgb(5, 110, 110);
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  border: 1px solid rgb(5, 110, 110);
+  border-radius: 30px;
+  
+}
+
 .profile-desc{
   height: 100px;
-  background: rgb(255, 254, 254);
+  background: rgb(219, 235, 134);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-}
-
-.main{
-  position: relative;
-
 }
 
 .profile-pic-container{
   margin-top: 40px;
   margin-left: 40px;
   position: absolute;
+  z-index: 9999;
+  border-radius: 50%;
   /* width: 300px;
   height: 300px; */
-  border-radius: 50%;
-  border: 10px solid white;
   
-
 } 
 .profile-pic{
-
-  width: 200px;
-    height: 200px;
-    border-radius: 50%;
+border: 10px solid white;
+border-radius: 50%;
 }
 
-.cam-container{
-  
-  /* position: absolute; */
-  width: 50px;
-  height: 50PX;
-  background-color: #ffffff;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+
+
+
+
+
+
+
+/* Aside Styling */
+.aside1, .aside2{
   display: flex;
-}
-.cam-align{
-  position: absolute;
-  /* margin-right: 30px; */
+  flex-direction: column;
+  gap: 10px;
   margin-top: 20px;
-  width: 95%;
-
-  /* height: 30px; */
-  /* background-color: aqua; */
-  justify-content: flex-end;
-  display: flex;
+  padding: 0px;
+  border-radius: 10px;
+ 
 }
 
-.cam-container > i {
-  font-size: 24px;
+
+
+/* responsive design */
+@media all and (min-width: 800px){
+ .main{
+  flex: 3;
+ }
+.aside1{
+  order: 1;
+}
+.aside2{
+  order: 2;
+}
+.main{
+  order: 2;
+}
+.footer{
+  order: 4;
+}
+}
+
+@media all and (min-width:600px){
+  .aside{
+    flex:1;
+  }
+}
+  
+
+
+
+
+
+/* main section */
+
+
+
+
+.footer{
+  height: 80px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 0px 14px -1px rgba(0,0,0,0.75);
 }
